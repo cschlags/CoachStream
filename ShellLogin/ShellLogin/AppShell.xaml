@@ -54,8 +54,11 @@
         <ShellContent Route="home"
                       IsTabStop="False"
                       ContentTemplate="{DataTemplate local:MainPage}"
-                      Title="Home" />
+                      Title="My Athletes" />
     </FlyoutItem>
+    <MenuItem Text="Activity"/>
+    <MenuItem Text="Messages"/>
+    <MenuItem Text="Account Settings"/>
     <MenuItem Text="Logout"
               Command="{Binding ExecuteLogout}" />
 </Shell>

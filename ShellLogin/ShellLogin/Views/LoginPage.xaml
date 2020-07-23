@@ -14,7 +14,7 @@
     <ContentPage.Content>
         <StackLayout Spacing="16" Margin="16,32">
             <Frame>
-                <Label Text="Welcome to Xamarin.Forms Shell Login!" HorizontalTextAlignment="Center" FontSize="Title" />
+                <Label Text="CoachStream" HorizontalTextAlignment="Center" FontSize="Title" />
             </Frame>
             <Entry Text="{Binding Username}"
                    Placeholder="Username" />
