@@ -25,8 +25,9 @@ namespace ShellLogin.Views
             collectionViewAthletes.ItemsSource = AllAthletes;
         }
 
-        void OnAthleteClicked(object sender, EventArgs e)
+        private async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            await Navigation.PushAsync(new MediaEditPage());
         }
     }
 }

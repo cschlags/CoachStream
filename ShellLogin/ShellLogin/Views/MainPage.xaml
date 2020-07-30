@@ -54,7 +54,11 @@
                    HorizontalOptions="Center"
                    Font="Bold,15"></Label>
         </StackLayout>
-        <CollectionView x:Name="collectionViewAthletes" Grid.Row="2" Grid.ColumnSpan="3">
+        <CollectionView x:Name="collectionViewAthletes" 
+                        Grid.Row="2" 
+                        Grid.ColumnSpan="3" 
+                        SelectionMode="Single"
+                        SelectionChanged="OnCollectionViewSelectionChanged">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Spacing="8" HorizontalOptions="EndAndExpand">
