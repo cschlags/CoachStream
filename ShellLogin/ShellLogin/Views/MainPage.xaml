@@ -20,27 +20,40 @@
         <BoxView Color="DarkGray"
                  Grid.ColumnSpan="3"/>
         <BoxView Grid.Row="1"
+                 Grid.ColumnSpan="3"
                  Color="AliceBlue" />
-        <Label Grid.Row="1"
-                       Text="12 Remaining Videos"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"/>
-        <BoxView Grid.Row="1"
-                 Grid.Column="1"
-                 Color="LightSkyBlue" />
-        <Label Grid.Row="1"
-               Grid.Column="1"
-               Text="4 Over Due"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
-        <BoxView Grid.Row="1"
-                 Grid.Column="2"
-                 Color="CadetBlue" />
-        <Label Grid.Row="1"
-               Grid.Column="2"
-               Text="12 Completed Coaching"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
+        <StackLayout Grid.Row="1"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Text="12"
+                   HorizontalOptions="Center"
+                   Font="Bold,30"></Label>
+            <Label Text="Remaining Videos"
+                   HorizontalOptions="Center"
+                   Font="Bold,15"></Label>
+        </StackLayout>
+        <StackLayout Grid.Row="1"
+                     Grid.Column="1"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Text="4"
+                   HorizontalOptions="Center"
+                   Font="Bold,30"></Label>
+            <Label Text="Over Due"
+                   HorizontalOptions="Center"
+                   Font="Bold,15"></Label>
+        </StackLayout>
+        <StackLayout Grid.Row="1"
+                     Grid.Column="2"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Label Text="9"
+                   HorizontalOptions="Center"
+                   Font="Bold,30"></Label>
+            <Label Text="Completed"
+                   HorizontalOptions="Center"
+                   Font="Bold,15"></Label>
+        </StackLayout>
         <CollectionView x:Name="collectionViewAthletes" Grid.Row="2" Grid.ColumnSpan="3">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
@@ -52,10 +65,12 @@
                                            Grid.Column="0"/>
                                     <Label Text="{Binding Name}"
                                            Grid.Column="1"
-                                           Grid.ColumnSpan="2"/>
+                                           Grid.ColumnSpan="2"
+                                           Font="Bold, 18"/>
                                     <Label Text="{Binding Date}"
                                            Grid.Column="3"
-                                           Grid.ColumnSpan="2"/>
+                                           Grid.ColumnSpan="2"
+                                           Font="Bold, 18"/>
                                 </Grid>
                             </StackLayout>
                         </Frame>

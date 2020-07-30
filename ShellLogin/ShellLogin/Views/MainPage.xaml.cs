@@ -24,5 +24,9 @@ namespace ShellLogin.Views
             AllAthletes = new List<Athlete>(Athletes.Get());
             collectionViewAthletes.ItemsSource = AllAthletes;
         }
+
+        void OnAthleteClicked(object sender, EventArgs e)
+        {
+        }
     }
 }
