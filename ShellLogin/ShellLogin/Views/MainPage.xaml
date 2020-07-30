@@ -17,7 +17,6 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <controls:CircleImage Grid.Row="3" Source="tab_about.png" WidthRequest="100" HeightRequest="100" Aspect="AspectFill" VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
         <BoxView Color="DarkGray"
                  Grid.ColumnSpan="3"/>
         <BoxView Grid.Row="1"
@@ -42,5 +41,27 @@
                Text="12 Completed Coaching"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
+        <CollectionView x:Name="collectionViewAthletes" Grid.Row="2" Grid.ColumnSpan="3">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Spacing="8" HorizontalOptions="EndAndExpand">
+                        <Frame>
+                            <StackLayout>
+                                <Grid>
+                                    <Image Source="tab_about.png"
+                                           Grid.Column="0"/>
+                                    <Label Text="{Binding Name}"
+                                           Grid.Column="1"
+                                           Grid.ColumnSpan="2"/>
+                                    <Label Text="{Binding Date}"
+                                           Grid.Column="3"
+                                           Grid.ColumnSpan="2"/>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>
